@@ -29,12 +29,25 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        <div>
+        <div className="Navbar">
           {""}
-          <Link href={"/"}> home</Link>
-          <Link href={"/about"}> about</Link>
-          <Link href={"/contact"}> contact</Link>
-          {/* <Link href={"/users"}> users</Link> */}
+
+          <button className="Navbar-button">
+            <Link href={"/"}> home</Link>
+          </button>
+
+          <button className="Navbar-button">
+            <Link href={"/about"}> about</Link>
+          </button>
+
+          <button className="Navbar-button">
+            <Link href={"/contact"}> contact</Link>  
+          </button>
+
+          <button className="Navbar-button">
+            <Link href={"/users"}> users</Link>
+          </button>
+          
         </div>
 
         {children}

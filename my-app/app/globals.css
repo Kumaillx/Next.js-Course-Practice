@@ -39,11 +39,15 @@ a:hover {
   text-decoration: underline;
 }
 
+button text {
+  color: white;
+}
+
 button {
   font-family: var(--font-sans);
-  background: var(--primary);
-  color: #fff;
-  border: none;
+  /* background: var(--primary); */
+  
+  border: none;  
   border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -93,3 +97,88 @@ code, pre {
     color: #f3f4f6;
   }
 } 
+
+.contact-page {
+  font-family: var(--font-sans);
+  padding: 2rem 2.5rem;
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, #1faec4 0%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+  max-width: 480px;
+  width: 100%;
+  margin: 3rem auto;
+  border: 1px solid var(--secondary);
+  transition: box-shadow var(--transition), border-color var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.contact-page form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-page label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact-page .form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-page .form-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page input,
+.contact-page textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e7ef;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+  border-color: var(--primary);
+  background: rgba(255,255,255,0.25);
+}
+
+.contact-page textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.contact-page button {
+  align-self: center;
+  margin-top: 0.5rem;
+}
+
+.Navbar
+{
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+  
