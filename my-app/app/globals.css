@@ -3,24 +3,93 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --border-radius: 0.5rem;
+  --transition: 0.2s ease;
+  --font-sans: 'Geist Sans', Arial, Helvetica, sans-serif;
+  --font-mono: 'Geist Mono', Menlo, Monaco, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary: #60a5fa;
+    --secondary: #94a3b8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background var(--transition), color var(--transition);
+  min-height: 100vh;
+  margin: 0;
 }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-sans);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+button:hover {
+  background: var(--secondary);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+  background: #f3f4f6;
+  color: #1e293b;
+  border-radius: var(--border-radius);
+  padding: 0.2em 0.4em;
+}
+@media (prefers-color-scheme: dark) {
+  code, pre {
+    background: #1e293b;
+    color: #f3f4f6;
+  }
+}
+
+.about {
+  font-family: var(--font-sans);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background: var(--secondary);
+  color: var(--foreground);
+}
+@media (prefers-color-scheme: dark) {
+  .about {
+    background: #374151;
+    color: #f3f4f6;
+  }
+}
+.users {
+  font-family: var(--font-sans);
+  padding: 1rem;
+  border-radius: var(--border-radius);    
+  background: var(--secondary);
+  color: var(--foreground);
+}
+@media (prefers-color-scheme: dark) {
+  .users {
+    background: #374151;
+    color: #f3f4f6;
+  }
+} 
